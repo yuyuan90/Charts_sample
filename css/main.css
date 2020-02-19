@@ -1,0 +1,132 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro
+}
+#main-container{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    
+}
+.rows{
+    width: 100%;
+    height: 320px;
+    padding: 0 10px;
+}
+.rows .row{
+    margin: 10px 30px;
+    padding: 20px 0;
+    height: 100%;
+    background: white
+    
+}
+.rows .row .col-md-4, .rows .row .col-md-8,.rows .row .col-md-12{
+    height: 100%;
+    padding: 0 10px;
+}
+.rows .title{
+    height: 150px;
+    background-color: gainsboro;
+    padding: 0
+}
+.rows .title p{
+    font-size: 110px;
+    color:darkgrey;
+    left: 0;
+    line-height: 200px;
+    margin-top: -30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.rows .cards{
+    height: 160px;
+    margin: -20px 30px 0 30px;
+}
+
+.rows .cards div{
+    height: 100%;
+    padding: 5px 20px;
+    margin: 0 20px;
+}
+
+.rows .cards h4{
+    color: gray;
+    width: 100%
+}
+.rows .cards p{
+    font-size: 34px;
+    font-weight: bold; 
+}
+.rows .cards div{
+    border-style: solid;
+    border-width: 1px;
+}
+.card1{
+    
+    border-color: #2F4554
+}
+.card1 p{
+    color: #2F4554;
+
+}
+.card2{
+    border-color:#DE9325
+}
+.card2 p{
+    color: #DE9325;
+
+}
+.card3{
+    border-color:#7DBD9F 
+}
+.card3 p{
+    color: #7DBD9F ;
+
+}
+.card4{
+    border-color:#4A6E86  
+}
+.card4 p{
+    color: #4A6E86 ;
+
+}
+.card5{
+    border-color:#508A91
+}
+.card5 p{
+    color: #508A91 ;
+
+}
+h4 small{
+    float: right;
+}   
+.down{
+    color: #7DBD9F
+}
+.up{
+    color: #D53A36
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
