@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <title>echarts</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+<body>
+    
+    <div id="main-container">
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">DFOCUS</a>
+            </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="">2019 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">By Q <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="monthly_sample.html">Q1</a></li>
+          </ul>
+        </li>
+        <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">April<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href=" ">...</a></li>
+          </ul>
+        </li>
+ 
+ 
+      </ul>
+     
+    </div><!-- /.navbar-collapse -->
+    
+  </div><!-- /.container-fluid -->
+</nav>
+        <div class="rows">
+            <div class="row title">
+                <p>2020 April </p>
+            </div>
+            <div class="row cards">
+               <div class="col-md-2 card1">
+                  <h4>Monthly Revenue (¥)</h4>
+                  <small class="down">&darr; 16.7%</small>
+                  <p> 18,241,295 </p>
+                </div>
+                 <div class="col-md-2 card2">
+                     <h4>Monthly Goal / YTD</h4>
+                     <small>Quota 30,000,000</small>
+                     <p>50% / 20%</p>
+                </div>
+                <div class="col-md-2 card3">
+                    <h4>Monthly Profit (¥)</h4>
+                    <small class="up">&uarr; 6.7%</small>
+                    <p>30,008,090</p>
+                </div>
+                <div class="col-md-2 card4">
+                    <h4>Profit Margin</h4>
+                    <small class="up">&uarr; 36.7%</small>
+                    <p>71.3%</p>
+                </div>
+                <div class="col-md-2 card5">
+                    <h4>Cash Collection (¥)</h4>
+                    <small class="up">&uarr; 36.7%</small>
+                    <p>1,230,000</p>
+                </div>
+                
+            
+            </div>
+            <div class="row cards">
+               <div class="col-md-2 card1">
+                  <h4>New Clients </h4>
+                  <small class="down">&darr; 1.7%</small>
+                  <p> 18 </p>
+                </div>
+                 <div class="col-md-2 card2">
+                     <h4>New Channels</h4>
+                     <small class="down">&darr; 1.7%</small>
+                     <p>15</p>
+                </div>
+                <div class="col-md-2 card3">
+                    <h4>Monthly Wins <small title="New 10 | Existing-Maintenance 4 | Existing-New Supplements 0 | Existing-New Opportunities 6">&#9432;</small></h4>
+                    
+                    <small class="up">&uarr; 6.7% </small>
+                    <p>30</p>
+                </div>
+                <div class="col-md-2 card4">
+                   <h4>Conversion Rate</h4>
+                   <small class="up">&uarr; 6.7%</small>
+                   <p>10%</p>
+                </div>
+                <div class="col-md-2 card5">
+                   <h4>Forecast</h4>
+                   <small>Next Month</small>
+                   <p>19,324,156</p>
+                </div>
+            
+            </div>
+          
+             <div class="row">
+                <div class="col-md-12" id="april_revenue_vs_cost"></div>
+            </div>
+            
+            <div class="row">
+               <div class="col-md-4" id="revenue_by_area"></div>
+               <div class="col-md-8" id="revenue_by_product"></div>
+            
+            </div>
+            <div class="row">
+                 
+                <div class="col-md-4" id="revenue_by_deal_type"></div>
+                <div class="col-md-8" id="revenue_by_month"></div>
+            </div>
+            <div class="row title">
+                <p>Sales Team Data </p>
+            </div>
+            <div class="row">
+                <div class="col-md-8" id="sales_monthly_performance"></div>
+                <div class="col-md-4" id="sales_actual_total_target_met"></div>
+                
+                
+               
+            </div>
+            <div class="row">
+                <div class="col-md-8" id="sales_performance"></div>
+                <div class="col-md-4" id="sales_total_target_met"></div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <caption>List of New Projects in April</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                            
+                                <th scope="col">Name</th>
+                                <th scope="col">Sum（¥）</th>
+                                <th scope="col" style="color:red">Profit</th>
+                                <th scope="col" style="color:red">Profit Margin</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Sales</th>
+                                <th scope="col">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>CBRE</td>
+                                <td>120，000</td>
+                                <td>60，000</td>
+                                <td>50%</td>
+                                <td>DMeeting</td>
+                                <td>Ryo</td>
+                                <td>Channel - JLL</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DTZ</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Savills</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-8" id="deals_this_month"></div>
+                <div class="col-md-4" id="leads_funnel"></div> 
+                
+            </div>
+            <div class="row title">
+                <p>Channel Data</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4" id="revenue_from_each_channel"></div>
+                <div class="col-md-4" id="revenue_from_channels"></div>
+                <div class="col-md-4" id="deals_from_channels"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-8" id="new_channel_each_month"></div>
+                <div class="col-md-4">
+                    <table class="table table-striped">
+                        <caption>List of New Channels in April</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Sales</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>CBRE</td>
+                                <td>Ryo</td>
+                                <td>Analytics</td>
+                                <td>Channel-JLL</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DTZ</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Savills</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-4" id="revenue_from_each_key_channel"></div>
+                <div class="col-md-4" id="revenue_from_key_channels"></div>
+                <div class="col-md-4" id="deals_from_key_channels"></div>
+            </div>
+            
+            
+            <div class="row title">
+                <p>Clients Data</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4" id="april_revenue_by_clients"></div>
+                <div class="col-md-8" id="new_client_each_month"></div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-4" id="client_industry"></div>
+                <div class="col-md-8">
+                    <table class="table table-striped">
+                        <caption>List of New Clients in April</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Amount (¥)</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Source</th>
+                                <th scope="col">Sales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>CBRE</td>
+                                <td>100000</td>
+                                <td>Analytics</td>
+                                <td>Channel-JLL</td>
+                                <td>Ryo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DTZ</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Savills</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-4" id="annual_repurchaser"></div>
+                <div class="col-md-8" id="annual_repurchase_sum">
+                    <table class="table table-striped">
+                        <caption>Repurchaser in April</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Times</th>
+                                <th scope="col">Sum (¥)</th>
+                                <th scope="col">Product/Service</th>
+                                <th scope="col">Sales</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>CBRE</td>
+                                <td>3</td>
+                                <td>1000000</td>
+                                <td>Analytics</td>
+                                <td>Ryo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DTZ</td>
+                                <td>2</td>
+                                <td>xxx</td>
+                                <td>Analytics</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Savills</td>
+                                <td>2</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                                <td>xxx</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                
+                </div>
+                
+            </div>
+            
+            <div class="row title">
+                <p>Product Lines</p>
+            </div>
+            <div class="row">
+                
+               <div class="col-md-12" id="product_line_goal_vs_actual"></div>
+                
+            </div>
+            <div class="row">
+               <div class="col-md-4" id="deals_by_product"></div> 
+               <div class="col-md-8" id="profit_by_product"></div>
+                
+            </div>
+            <div class="row">
+                
+               <div class="col-md-4" id="analytics_payback_period"></div>
+                <div class="col-md-4" id="dmeeting_payback_period"></div>
+                <div class="col-md-4" id="dbooking_payback_period"></div>
+                
+            </div>
+            <div class="row">
+                
+               <div class="col-md-4" id="assign_payback_period"></div>
+                <div class="col-md-4" id="am_payback_period"></div>
+                <div class="col-md-4" id="fm_payback_period"></div>
+                
+            </div>
+        
+      
+          
+        </div>
+        
+        
+        
+        
+
+    </div>
+    
+    
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/april.js"></script>
+    
+</body>
+    
+</html>
+
